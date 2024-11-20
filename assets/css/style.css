@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/*---------------------------*/
+/* General rules             */
+/*---------------------------*/
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+html {
+    min-width: 100%;
+}
+
+body {
+    background-color: #ff00ff;
+}
+
+/*---------------------------*/
+/* Game items                */
+/*---------------------------*/
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+ 
+.right {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 30px;
+    padding: 10px; 
+} 
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    flex-grow: 1; 
+    text-align: center; 
+}
+
+.play {
+    background-color: #fff;
+    color: #ff00ff;
+    width: 150px;
+    height: 40px;
+    font-weight: 700;
+    border-radius: 5px;
+    
+}
+
+.guesses {
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.number-user {
+    margin-top: 30px;
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    background-color: #fff;
+    color: #ff00ff;
+    outline: none; 
+    text-align: center; 
+    font-size: 102px; 
+    font-weight: 600;
+    box-sizing: border-box; 
+    background-color: #f0f0f0; 
+}
+
+.approach {
+    margin-top: 30px;
+    background-color: #9a009a;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: 60px;
+}
