@@ -41,6 +41,7 @@ function play() {
 }
 
 listen('input', numberUserObj, (event) => {
+    approachObj.innerText = '';
     numberUserObj.value = numberUserObj.value.replace(/[^0-9]/g, ''); 
 })
 
@@ -52,7 +53,7 @@ listen('keydown', numberUserObj, (event) => {
     const numberUser = parseInt(numberUserObj.value);
     
     if (numberToGuess === numberUser) {
-        approachObj.innerText = "You guessed it!";
+        approachObj.innerText = 'You guessed it!';
         numberUserObj.disabled = true;
         return;
     }
@@ -60,12 +61,12 @@ listen('keydown', numberUserObj, (event) => {
     counter--;    
     guessesValueObj.innerText = `${counter}`;    
 
-    if (numberToGuess < numberUser) approachObj.innerText = "My number is smaller";
+    if (numberToGuess < numberUser) approachObj.innerText = 'My number is smaller';
     
-    if (numberToGuess > numberUser) approachObj.innerText = "My number is bigger";
+    if (numberToGuess > numberUser) approachObj.innerText = 'My number is bigger';
     
     if (counter === 0) {
-        approachObj.innerText = "Game Over!";
+        approachObj.innerText = 'Game Over!';
         numberUserObj.disabled = true;
     }
 });
