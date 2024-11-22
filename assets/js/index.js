@@ -15,8 +15,8 @@ const guessesValueObj = select('.guesses-value');
 const numberUserObj = select('.number-user');
 const approachObj = select('.approach');
 const numbers = [...Array(GUESSES_LIMMIT).keys()].map(n => n + 1);
-const shuffledNumbers = getShuffledNumbers();
-const numberToGuess = shuffledNumbers[GUESSES_COUNTER];
+let shuffledNumbers = [];
+let numberToGuess = 0;
 let counter = 0;
 
 function listen(event, scope, callback) {
@@ -32,6 +32,8 @@ function getShuffledNumbers() {
 }
 
 function play() {
+    shuffledNumbers = getShuffledNumbers();
+    numberToGuess = shuffledNumbers[GUESSES_COUNTER];
     numberUserObj.disabled = false;
     numberUserObj.value = '';
     numberUserObj.focus();
